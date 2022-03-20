@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --ff-one: 'Overpass', sans-serif;
+  --ff-two: 'Poppins', sans-serif;
+  --clr-neutral: hsl(39, 8%, 35%);
+}
+
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--ff-one);
+  color: var(--clr-neutral);
+}
+
+.debug {
+  border: solid 1px red;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.small-card-container {
+  display: flex;
+}
+
+.small-card-container {
+  gap: 1.5rem;
+}
+
+.location-name {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  font-size: 13rem;
+  font-weight: 800;
+  color: hsla(39, 16%, 76%, 40%);
+  z-index: -1;
+}

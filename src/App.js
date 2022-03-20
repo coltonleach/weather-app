@@ -2,14 +2,15 @@ import React from 'react'
 import SearchBar from './components/SearchBar'
 import SmallCard from './components/SmallCard'
 import TodayCard from './components/TodayCard'
+import './styles.css'
 
 const App = () => {
   return (
     <div className='container'>
-      <p className="city-name">Austin</p>
+      <p className="location-name">Austin</p>
       <SearchBar />
       <TodayCard />
-      <div className="forecast-container">
+      <div className="small-card-container">
         <SmallCard />
         <SmallCard />
         <SmallCard />

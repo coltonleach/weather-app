@@ -1,0 +1,70 @@
+.today-card {
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+  height: 340px;
+  width: 530px;
+  background-color: white;
+}
+
+.today-container {
+  display: flex;
+  font-size: 1.75rem;
+  height: 100%;
+  width: 100%;
+}
+
+.today-title {
+  font-family: var(--ff-one);
+  font-size: 1.75rem;
+}
+
+.today-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.today-right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.today-right > p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  
+}
+
+.today-temp {
+  font-weight: 600;
+  font-size: 5rem;
+  margin-bottom: -20px; /* Needed because there's too much white space under the font */
+}
+
+.today-temp .degree {
+  font-weight: 200;
+}
+
+.percipitation,
+.wind {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

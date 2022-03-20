@@ -8,3 +8,7 @@ It's currently filled with hardcoded data, build my next step is to fetch the da
 
 Here is a picture of the themes built in Figma
 ![image](https://user-images.githubusercontent.com/6488761/159152395-c3e2030e-288c-40f8-bb8e-0dbc39fd09e1.png)
+TL: Sunrise
+TR: Midday
+BL: Sunset
+BR: Midnight

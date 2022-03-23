@@ -1,4 +1,5 @@
 .small-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 240px;
@@ -8,7 +9,8 @@
   align-items: center;
   font-size: 1.2rem;
   justify-content: space-evenly;
-  background-color: white;
+  overflow: hidden;
+  background-color: var(--day-small-card-clr);
 }
 
 .degree {
@@ -21,4 +23,11 @@
 
 .small-high-low {
   font-size: 1.6rem;
+}
+
+#small-sun{
+  position: absolute;
+  overflow: hidden;
+  bottom: 35px;
+  left: -35px;
 }

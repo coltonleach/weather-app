@@ -3,7 +3,12 @@
 :root {
   --ff-one: 'Overpass', sans-serif;
   --ff-two: 'Poppins', sans-serif;
-  --clr-neutral: hsl(39, 8%, 35%);
+  --animation: all 550ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 0ms;
+  --day-font-clr: hsl(35, 8%, 20%);
+  --day-search-bar-clr: hsl(201, 100%, 87%);
+  --day-today-card-clr: hsl(202, 100%, 79%);
+  --day-small-card-clr: hsl(202, 100%, 68%);
+  --gradient-clr: linear-gradient(180deg, #C9EBFF 20.31%, #7CC4ED 100%);
 }
 
 *,*::before,*::after {
@@ -14,11 +19,9 @@
 
 body{
   font-family: var(--ff-one);
-  color: var(--clr-neutral);
-}
-
-.debug {
-  border: solid 1px red;
+  color: var(--day-font-clr);
+  background: var(--gradient-clr);
+  overflow: hidden;
 }
 
 .container {
@@ -30,6 +33,7 @@ body{
   height: 100vh;
   overflow: hidden;
   gap: 2rem;
+  min-width: 1000px;
 }
 
 .small-card-container {
@@ -51,8 +55,32 @@ body{
   z-index: -1;
 }
 
+#moon {
+  position: absolute;
+  width: 500px;
+  z-index: -1;
+  right: 250px;
+  top: -150px;
+}
+
+#sun {
+  position: absolute;
+  width: 600px;
+  z-index: -1;
+  left: 150px;
+  top: -250px;
+}
+
 @media only screen and (max-width: 1110px){
   .location-name {
     font-size: 10rem;
+  }
+
+  #moon {
+    width: 400px;
+  }
+
+  #sun{
+    width: 500px;
   }
 }

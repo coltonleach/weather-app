@@ -21,4 +21,9 @@
   border: none;
   z-index: 1;
   background-color: white;
+  transition: all 100ms;
+}
+
+.search-bar:focus{
+  transform: scale(1.05);
 }

@@ -11,12 +11,14 @@
   background-color: white;
 }
 
-.small-card-temp {
-  font-size: 3.5rem;
-  font-weight: 600;
-  margin: -10px 0 -10px 0; /* Needed to remove whitespace around text */
-}
-
 .degree {
   font-weight: 200;
+}
+
+.small-card-weather {
+  font-weight: 700;
+}
+
+.small-high-low {
+  font-size: 1.6rem;
 }

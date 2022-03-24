@@ -6,6 +6,13 @@ import TodayCard from './components/TodayCard'
 import './styles.css'
 
 const App = () => {
+
+  // sunrise background: linear-gradient(180deg, #FF8285 0%, #FEA983 23.44%, #FFF5B6 49.48%, #FFF7C8 75%, #FFF9B8 100%)
+  // midday background: linear-gradient(180deg, #C9EBFF 20.31%, #7CC4ED 100%)
+  // sunset background: linear-gradient(180deg, #355070 0%, #6D597A 23.44%, #B56576 49.48%, #E56B6F 75%, #EAAC8B 100%)
+  // midnight background: linear-gradient(180deg, #5E548E 0%, #393752 61.46%, #1C192D 100%)
+
+
   const [location, setLocation] = useState('New York')
   const [current, setCurrent] = useState(null)
   const [forecast, setForecast] = useState(null)
@@ -26,15 +33,6 @@ const App = () => {
     }
   ])
   const [time, setTime] = useState('sunset')
-
-  //  searchbarStyle.backgroundColor = '#FC7174'
-  //  todayCardStyles.backgroundColor = '#FC8862'
-  //  todayCardStyles.color = '#EEF4ED'
-  //  smallCardStyles.backgroundColor = '#FDBB63'
-  //  smallCardStyles.color ='#EEF4ED'
-  //  background: linear-gradient(180deg, #FF4448 0%, #F75947 23.44%, #FC8862 49.48%, #FCA26B 75%, #FDBB63 100%);
-  //  background-blend-mode: hard-light;
-
 
   const handleSearchChange = (event) => {
     console.log(event.target.value)

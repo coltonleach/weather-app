@@ -5,6 +5,7 @@
   width: 240px;
   height: 180px;
   border-radius: 24px;
+  padding: 1rem;
   box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25);
   align-items: center;
   font-size: 1.2rem;
@@ -18,6 +19,7 @@
 }
 
 .small-card-weather {
+  text-align: center;
   font-weight: 700;
 }
 
@@ -25,9 +27,10 @@
   font-size: 1.6rem;
 }
 
-#small-sun{
+#small-bg{
   position: absolute;
   overflow: hidden;
-  bottom: 35px;
-  left: -35px;
+  bottom: 45px;
+  left: -45px;
+  opacity: 0.14;
 }

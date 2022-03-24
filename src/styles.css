@@ -3,7 +3,6 @@
 :root {
   --ff-one: 'Overpass', sans-serif;
   --ff-two: 'Poppins', sans-serif;
-  --animation: all 550ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 0ms;
   --day-font-clr: hsl(35, 8%, 20%);
   --day-search-bar-clr: hsl(201, 100%, 87%);
   --day-today-card-clr: hsl(202, 100%, 79%);
@@ -55,32 +54,8 @@ body{
   z-index: -1;
 }
 
-#moon {
-  position: absolute;
-  width: 500px;
-  z-index: -1;
-  right: 250px;
-  top: -150px;
-}
-
-#sun {
-  position: absolute;
-  width: 600px;
-  z-index: -1;
-  left: 150px;
-  top: -250px;
-}
-
 @media only screen and (max-width: 1110px){
   .location-name {
     font-size: 10rem;
-  }
-
-  #moon {
-    width: 400px;
-  }
-
-  #sun{
-    width: 500px;
   }
 }

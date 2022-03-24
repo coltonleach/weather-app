@@ -32,7 +32,7 @@ const App = () => {
       }
     }
   ])
-  const [time, setTime] = useState('sunset')
+  const [time, setTime] = useState('midnight')
 
   const handleSearchChange = (event) => {
     console.log(event.target.value)

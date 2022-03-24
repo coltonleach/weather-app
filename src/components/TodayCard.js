@@ -3,16 +3,18 @@ import Wind from '../svgComponents/Wind'
 import RainCloud from '../svgComponents/Raincloud'
 import Bgsun from '../svgComponents/Bgsun'
 import Bgmoon from '../svgComponents/Bgmoon'
+import Sunrise from '../svgComponents/Sunrise'
+import Sunset from '../svgComponents/Sunset'
 import './styles/TodayCard.css'
 
-const TodayCard = ({ current, todayInfo }) => {
+const TodayCard = ({ style, current, todayInfo }) => {
 
   const compassAngle = {
     transform: `rotate(${current.wind_degree}deg)`
   }
 
   return (
-    <div className='today-card'>
+    <div style={style} className='today-card'>
       <p className='today-description'>{current.condition.text}</p>
       <div className='today-container'>
         <div className='today-left'>
@@ -36,29 +38,11 @@ const TodayCard = ({ current, todayInfo }) => {
           <p>Humidity: {current.humidity}%</p>
           <div className='sun-icons'>
             <div className='sunrise'>
-              <svg width="57" height="54" viewBox="0 0 57 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M40.1802 41.1129C40.1802 37.9937 38.9411 35.0024 36.7356 32.7968C34.53 30.5912 31.5386 29.3521 28.4194 29.3521C25.3003 29.3521 22.3089 30.5912 20.1033 32.7968C17.8978 35.0024 16.6587 37.9937 16.6587 41.1129" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M28.4194 3.4785V19.9436" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M10.1196 22.8132L13.4597 26.1532" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2.5459 41.1129H7.2502" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M49.5889 41.1129H54.2932" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M43.3789 26.1532L46.719 22.8132" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M54.2932 50.5215H2.5459" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M19.0107 12.8871L28.4193 3.4785L37.8279 12.8871" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <Sunrise width="57" height="54"/>
               <p>{todayInfo.astro.sunrise.toLowerCase().replace(/^(0+)/g, '')}</p>
             </div>
             <div className='sunset'>
-              <svg width="57" height="54" viewBox="0 0 57 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M40.1802 41.1129C40.1802 37.9937 38.9411 35.0024 36.7356 32.7968C34.53 30.5912 31.5386 29.3521 28.4194 29.3521C25.3003 29.3521 22.3089 30.5912 20.1033 32.7968C17.8978 35.0024 16.6587 37.9937 16.6587 41.1129" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M28.4194 19.9436V3.4785" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M10.1196 22.8132L13.4597 26.1532" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2.5459 41.1129H7.2502" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M49.5889 41.1129H54.2932" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M43.3789 26.1532L46.719 22.8132" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M54.2932 50.5215H2.5459" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M37.8279 10.5349L28.4193 19.9435L19.0107 10.5349" stroke="hsl(35, 8%, 20%)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <Sunset width="57" height="54"/>
               <p>{todayInfo.astro.sunset.toLowerCase().replace(/^(0+)/g, '')}</p>
             </div>
           </div>

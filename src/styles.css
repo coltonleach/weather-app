@@ -3,10 +3,10 @@
 :root {
   --ff-one: 'Overpass', sans-serif;
   --ff-two: 'Poppins', sans-serif;
-  --day-font-clr: hsl(35, 8%, 20%);
-  --day-search-bar-clr: hsl(201, 100%, 87%);
-  --day-today-card-clr: hsl(202, 100%, 79%);
-  --day-small-card-clr: hsl(202, 100%, 68%);
+  --day-font-clr: #37342f;
+  --day-search-bar-clr: #bde8ff;
+  --day-today-card-clr: #94d8ff;
+  --day-small-card-clr: #5cc3ff;
   --gradient-clr: linear-gradient(180deg, #C9EBFF 20.31%, #7CC4ED 100%);
 }
 

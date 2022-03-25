@@ -11,8 +11,10 @@
   font-size: 1.2rem;
   justify-content: space-evenly;
   overflow: hidden;
-  background-color: var(--day-small-card-clr);
+  background-color: var(--small-card-clr);
 }
+
+
 
 .degree {
   font-weight: 200;

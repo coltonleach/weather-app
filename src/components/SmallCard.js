@@ -4,9 +4,9 @@ import RainCloud from '../svgComponents/Raincloud'
 import SmallCardBG from './SmallCardBG'
 import './styles/SmallCard.css'
 
-const SmallCard = ({ style, forecast }) => {
+const SmallCard = ({ forecast }) => {
   return (
-    <div key={forecast.date} style={style} className='small-card'>
+    <div key={forecast.date} className='small-card'>
       <p className='small-card-day'>{forecast.date}</p>
       <p className='small-high-low'>{Math.round(forecast.day.maxtemp_f)}<span className="degree">°</span>/{Math.round(forecast.day.mintemp_f)}<span className="degree">°</span></p>
         <div className='icons'>

@@ -12,7 +12,6 @@
   cursor: pointer;
 }
 
-
 .search-bar {
   position: relative;
   width: 200px;
@@ -24,8 +23,8 @@
   border: none;
   z-index: 1;
   outline: none;
-  color: var(--day-font-clr);
-  background-color: var(--day-search-bar-clr);
+  color: var(--font-clr);
+  background-color: var(--search-bar-clr);
   transition: all 550ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 0ms;
 }
 
@@ -36,6 +35,7 @@
 .search-bar:focus + svg {
   transform: scale(1.1) rotate(10deg);
 }
+
 .container-search > svg:hover {
   transform: rotate(-10deg);
 }

@@ -7,14 +7,14 @@ import Sunrise from '../svgComponents/Sunrise'
 import Sunset from '../svgComponents/Sunset'
 import './styles/TodayCard.css'
 
-const TodayCard = ({ style, current, todayInfo }) => {
+const TodayCard = ({ sunLow, current, todayInfo }) => {
 
   const compassAngle = {
     transform: `rotate(${current.wind_degree}deg)`
   }
 
   return (
-    <div style={style} className='today-card'>
+    <div className='today-card'>
       <p className='today-description'>{current.condition.text}</p>
       <div className='today-container'>
         <div className='today-left'>
@@ -65,7 +65,7 @@ const TodayCard = ({ style, current, todayInfo }) => {
         </div>
       </div>
       {current.is_day
-        ? <Bgsun id='sun'/>
+        ? <Bgsun id={sunLow ? 'sun-low' : 'sun'} />
         : <Bgmoon id='moon'/>
       }
     </div>

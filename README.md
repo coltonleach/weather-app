@@ -1,5 +1,13 @@
 # ReactJS Weather App
 
+Progress as of **3/24/2022**
+The weather app is now 99% finished, I just have to add some skeleton cards in place as a loading animation. Right now it's just two empty divs taking their places, which is definitely not a good look.
+![image](https://user-images.githubusercontent.com/6488761/160056657-628afd4c-74d4-41e0-8d57-a80d8975a32d.png)
+
+Progress as of **3/23/2022**
+I got pretty much everything done. The small cards display the correct icons based on if its going to rain, snow, cloudy, or clear skys. The search bar, today card, and small cards all change colors based on the time of day. The only thing that's left is to change the background to be the appropriate color, but I ran into an issue when trying to change the body background. Something to do with it unmounting. But it's past midnight right now, so I'm going to work on it tomorrow, and it'll all be functioning correctly. I will 100% refactor the theme management though, because right now it's an absolute mess.
+![image](https://user-images.githubusercontent.com/6488761/159847535-ca3d1092-8ef5-4ad8-8f13-6e0b744fca9b.png)
+
 Progress as of **3/22/2022**
 Just need to figure out how to assign the correct weather image for the small cards (rain, cloudy, etc), and then incorporate the themes based on the time of day.
 ![image](https://user-images.githubusercontent.com/6488761/159634761-dd00018a-ee52-403a-91a5-0f2df9fcb6d0.png)

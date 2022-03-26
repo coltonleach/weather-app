@@ -6,7 +6,7 @@ import './styles/SmallCard.css'
 
 const SmallCard = ({ forecast }) => {
   return (
-    <div key={forecast.date} className='small-card'>
+    <div className='small-card'>
       <p className='small-card-day'>{forecast.date}</p>
       <p className='small-high-low'>{Math.round(forecast.day.maxtemp_f)}<span className="degree">°</span>/{Math.round(forecast.day.mintemp_f)}<span className="degree">°</span></p>
         <div className='icons'>

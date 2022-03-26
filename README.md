@@ -1,5 +1,8 @@
 # ReactJS Weather App
 
+Progress as of **3/25/2022**
+It is finally finished 🥳! I decided to go against a proper skeleton card as it would look a little goofy, so I did a typical "shine/highlight" animation (which surprisingly wasn't as straight forward as I expected, but didn't take long at all). Really happy with how this turned out, and was an awesome learning experience. No screenshot here, as I'm gonna simply host the site on Netlify. Will update this Readme file whenever it's published.
+
 Progress as of **3/24/2022**
 The weather app is now 99% finished, I just have to add some skeleton cards in place as a loading animation. Right now it's just two empty divs taking their places, which is definitely not a good look.
 ![image](https://user-images.githubusercontent.com/6488761/160056657-628afd4c-74d4-41e0-8d57-a80d8975a32d.png)

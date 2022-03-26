@@ -3,11 +3,13 @@ import axios from 'axios'
 import SearchBar from './components/SearchBar'
 import SmallCard from './components/SmallCard'
 import TodayCard from './components/TodayCard'
+import SkeletonTodayCard from './components/SkeletonTodayCard'
+import SkeletonSmallCard from './components/SkeletonSmallCard'
 import './styles.css'
 
 const App = () => {
 
-  const [location, setLocation] = useState('Hong Kong')
+  const [location, setLocation] = useState('Kiev')
   const [current, setCurrent] = useState(null)
   const [forecast, setForecast] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -20,7 +22,7 @@ const App = () => {
       setCurrent(res.data.current)
       setForecast(res.data.forecast.forecastday)
       setLocation(res.data.location.name)
-      setLoading(false)
+      setTimeout(()=> setLoading(false), 1000)
       const date = new Date(res.data.location.localtime + "Z")
       theme(date.getUTCHours())
     })
@@ -28,7 +30,6 @@ const App = () => {
 
   const theme = (hours) => {
     if(7 <= hours && hours < 9){ //sunrise
-
       document.documentElement.style.setProperty('--font-clr', '#EEF4ED')
       document.documentElement.style.setProperty('--search-bar-clr', '#FC7174')
       document.documentElement.style.setProperty('--today-card-clr', '#FC8862')
@@ -36,7 +37,7 @@ const App = () => {
       document.documentElement.style.setProperty('--gradient-clr', 'linear-gradient(180deg, #FF8285 0%, #FEA983 23.44%, #FFF5B6 49.48%, #FFF7C8 75%, #FFF9B8 100%)')
       setSunLow(true)
       setTime('sunrise')
-    }else if(9 <= hours && hours < 18){ //midday
+    }else if(9 <= hours && hours < 19){ //midday
       document.documentElement.style.setProperty('--font-clr', '#37342f')
       document.documentElement.style.setProperty('--search-bar-clr', '#bde8ff')
       document.documentElement.style.setProperty('--today-card-clr', '#94d8ff')
@@ -44,7 +45,7 @@ const App = () => {
       document.documentElement.style.setProperty('--gradient-clr', 'linear-gradient(180deg, hsl(202, 100%, 89%) 20.31%, hsl(202, 76%, 71%) 100%)')
       setSunLow(false)
       setTime('midday')
-    }else if(18 <= hours && hours < 21){ //sunset
+    }else if(19 <= hours && hours < 21){ //sunset
       document.documentElement.style.setProperty('--font-clr', '#EEF4ED')
       document.documentElement.style.setProperty('--search-bar-clr', '#355070')
       document.documentElement.style.setProperty('--today-card-clr', '#B56576')
@@ -80,14 +81,18 @@ const App = () => {
     <div className='container'>
       <SearchBar location={location} searchLocation={searchLocation} handleSearchChange={handleSearchChange}/>
       {loading
-      ? <div>aaa</div>
+      ? <SkeletonTodayCard />
       : <TodayCard sunLow={sunLow} current={current} todayInfo={forecast[0]}/>}
       
       {loading
-      ? <div>bbb</div>
+      ? <div className="small-card-container">
+          <SkeletonSmallCard />
+          <SkeletonSmallCard />
+          <SkeletonSmallCard />
+        </div>
       : <div className="small-card-container">
           {forecast.map(day => {
-            return <SmallCard forecast={day}/>
+            return <SmallCard key={day.date} forecast={day}/>
           })}
         </div>
       }

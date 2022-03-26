@@ -80,7 +80,7 @@ const App = () => {
     <p className="location-name">{location}</p>
     <div className='container'>
       <SearchBar location={location} searchLocation={searchLocation} handleSearchChange={handleSearchChange}/>
-      {loading
+      {loading //if loading == true: display SkeletonTodayCard, else: TodayCard
       ? <SkeletonTodayCard />
       : <TodayCard sunLow={sunLow} current={current} todayInfo={forecast[0]}/>}
       
@@ -91,7 +91,7 @@ const App = () => {
           <SkeletonSmallCard />
         </div>
       : <div className="small-card-container">
-          {forecast.map(day => {
+          {forecast.map(day => { //The api returns multiple days in a forecast object. For each day, return a SmallCard component with the respective data
             return <SmallCard key={day.date} forecast={day}/>
           })}
         </div>

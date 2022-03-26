@@ -29,7 +29,7 @@ const App = () => {
   }
 
   const theme = (hours) => {
-    if(7 <= hours && hours < 9){ //sunrise
+    if(6 <= hours && hours < 9){ //sunrise
       document.documentElement.style.setProperty('--font-clr', '#EEF4ED')
       document.documentElement.style.setProperty('--search-bar-clr', '#FC7174')
       document.documentElement.style.setProperty('--today-card-clr', '#FC8862')

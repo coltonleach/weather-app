@@ -17,7 +17,7 @@ const App = () => {
   const [sunLow, setSunLow] = useState(false)
 
   const fetInfo = () => {
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_KEY}&q=${location}&days=3`)
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_KEY}&q=${location}&days=3`)
     .then(res => {
       setCurrent(res.data.current)
       setForecast(res.data.forecast.forecastday)

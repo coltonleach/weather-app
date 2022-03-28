@@ -136,4 +136,8 @@
     gap: 0.5rem;
   }
 
+  #sun-low {
+    top: 50vh;
+  }
+
 }

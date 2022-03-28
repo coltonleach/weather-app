@@ -1,6 +1,6 @@
 .today-card {
   position: relative;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem 2rem;
@@ -104,4 +104,36 @@
   z-index: -1;
   left: -350px;
   top: 100px;
+}
+
+
+@media only screen and (max-width: 650px){
+  .today-card{
+    flex-direction: column;
+    width: 300px;
+    height: 540px;
+  }
+
+  .today-container{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .today-left {
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .today-left > .icons {
+    gap: 0;
+    justify-content: space-around;
+  }
+  
+  .today-right {
+    margin-top: 0.5rem;
+    align-items: center;
+    margin-left: inherit;
+    gap: 0.5rem;
+  }
+
 }

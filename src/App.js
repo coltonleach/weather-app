@@ -8,20 +8,22 @@ import SkeletonSmallCard from './components/SkeletonSmallCard'
 import './styles.css'
 
 const App = () => {
-
-  const [location, setLocation] = useState('Kiev')
-  const [current, setCurrent] = useState(null)
+  const [locationName, setLocationName] = useState('Kiev')
+  const [location, setLocation] = useState(null)
   const [forecast, setForecast] = useState(null)
+  const [current, setCurrent] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [time, setTime] = useState('midday')
   const [sunLow, setSunLow] = useState(false)
+  const [time, setTime] = useState('midday')
 
   const fetInfo = () => {
-    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_KEY}&q=${location}&days=3`)
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_KEY}&q=${locationName}&days=3`)
     .then(res => {
+      console.log(res.data)
       setCurrent(res.data.current)
       setForecast(res.data.forecast.forecastday)
-      setLocation(res.data.location.name)
+      setLocation(res.data.location)
+      setLocationName(res.data.location.name)
       setTimeout(()=> setLoading(false), 1000)
       const date = new Date(res.data.location.localtime + "Z")
       theme(date.getUTCHours())
@@ -64,7 +66,7 @@ const App = () => {
   }
 
   const handleSearchChange = (event) => {
-    setLocation(event.target.value)
+    setLocationName(event.target.value)
   }
 
   const searchLocation = (event) => {
@@ -77,12 +79,12 @@ const App = () => {
   }, [])
   
   return (<>
-    <p className="location-name">{location}</p>
+    <p className="location-name">{locationName}</p>
     <div className='container'>
-      <SearchBar location={location} searchLocation={searchLocation} handleSearchChange={handleSearchChange}/>
+      <SearchBar location={locationName} searchLocation={searchLocation} handleSearchChange={handleSearchChange}/>
       {loading //if loading == true: display SkeletonTodayCard, else: TodayCard
       ? <SkeletonTodayCard />
-      : <TodayCard sunLow={sunLow} current={current} todayInfo={forecast[0]}/>}
+      : <TodayCard time={time} sunLow={sunLow} current={current} todayInfo={forecast[0]} location={location}/>}
       
       {loading
       ? <div className="small-card-container">

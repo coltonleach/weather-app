@@ -8,7 +8,9 @@ import Sunset from '../svgComponents/Sunset'
 import Compassarrow from '../svgComponents/Compassarrow'
 import './styles/TodayCard.css'
 
-const TodayCard = ({ sunLow, current, todayInfo }) => {
+const TodayCard = ({ time, sunLow, current, todayInfo, location }) => {
+
+  const date = new Date(location.localtime)
 
   const compassAngle = {
     transform: `rotate(${current.wind_degree}deg)`
@@ -16,7 +18,7 @@ const TodayCard = ({ sunLow, current, todayInfo }) => {
 
   return (
     <div className='today-card'>
-      <p className='today-description'>{current.condition.text}</p>
+      <p className='today-description'>{current.condition.text} as of {date.toLocaleTimeString()}</p>
       <div className='today-container'>
         <div className='today-left'>
           <p className='today-temp'>{Math.round(current.temp_f)}<span className="degree">°</span></p>
@@ -51,7 +53,7 @@ const TodayCard = ({ sunLow, current, todayInfo }) => {
       </div>
       { /* if it's daytime: display sun, else: display moon 
            and if it is the sun, check to see if the sun should be low or not */
-        current.is_day
+        (current.is_day && time !== 'midnight')
         ? <Bgsun id={sunLow ? 'sun-low' : 'sun'} />
         : <Bgmoon id='moon'/>
       }

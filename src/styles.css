@@ -37,9 +37,6 @@ body{
 
 .small-card-container {
   display: flex;
-}
-
-.small-card-container {
   gap: 1.5rem;
 }
 
@@ -78,3 +75,22 @@ body{
   }
 }
 
+@media only screen and (max-width: 650px){
+  body, .container{
+    overflow-y: visible;
+  }
+
+  .container{
+    height: 100%;
+    padding-top: 3rem;
+  }
+  
+  .location-name {
+    font-size: 6rem;
+  }
+
+  .small-card-container{
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+}

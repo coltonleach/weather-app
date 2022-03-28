@@ -39,3 +39,20 @@
 .container-search > svg:hover {
   transform: rotate(-10deg);
 }
+
+@media only screen and (max-width: 650px){
+  .search-bar {
+    padding: 1.2rem;
+    width: 100px;
+    height: 2rem;
+  }
+
+  .search-bar:focus{
+    width: 200px;
+  }
+
+  .container-search > svg {
+    visibility: hidden ;
+  }
+  
+}

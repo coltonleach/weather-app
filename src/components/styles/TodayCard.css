@@ -49,7 +49,6 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
-  
 }
 
 .today-temp {
@@ -112,6 +111,7 @@
     flex-direction: column;
     width: 300px;
     height: 540px;
+    padding: 1rem;
   }
 
   .today-container{
@@ -139,5 +139,4 @@
   #sun-low {
     top: 50vh;
   }
-
 }

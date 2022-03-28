@@ -19,7 +19,6 @@ const App = () => {
   const fetInfo = () => {
     axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_KEY}&q=${locationName}&days=3`)
     .then(res => {
-      console.log(res.data)
       setCurrent(res.data.current)
       setForecast(res.data.forecast.forecastday)
       setLocation(res.data.location)

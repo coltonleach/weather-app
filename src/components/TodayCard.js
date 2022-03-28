@@ -18,7 +18,7 @@ const TodayCard = ({ time, sunLow, current, todayInfo, location }) => {
 
   return (
     <div className='today-card'>
-      <p className='today-description'>{current.condition.text} as of {date.toLocaleTimeString()}</p>
+      <p className='today-description'>{current.condition.text} as of {date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
       <div className='today-container'>
         <div className='today-left'>
           <p className='today-temp'>{Math.round(current.temp_f)}<span className="degree">°</span></p>

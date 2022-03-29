@@ -139,4 +139,8 @@
   #sun-low {
     top: 50vh;
   }
+
+  .sun-icons{
+    justify-content: space-around;
+  }
 }

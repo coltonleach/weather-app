@@ -143,4 +143,8 @@
   .sun-icons{
     justify-content: space-around;
   }
+
+  #moon {
+    left: 200px;
+  }
 }
